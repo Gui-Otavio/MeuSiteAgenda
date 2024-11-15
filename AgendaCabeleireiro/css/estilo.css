@@ -1,0 +1,136 @@
+/* Estilos gerais da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #9fc5ff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    height: 100vh; 
+}
+
+/* Texto de boas-vindas */
+.welcome-text {
+    margin-top: 30px; /* Dist. topo da página e texto */
+}
+
+/* Estilo do título */
+.welcome-text h1 {
+    font-size: 22px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+/* Estilo do parágrafo */
+.welcome-text p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Estilo do calendário */
+.calendar {
+    width: 300px;
+    margin-top: 30px; /* Dist. texto e calendário */
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo dos controles de ano e mês */
+.calendar-year, .calendar-month {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.calendar-year button, .calendar-month button {
+    background-color: #ccc;
+    color: black;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.calendar-year button:hover, .calendar-month button:hover {
+    background-color: #bbb;
+}
+
+/* Estilo dos dias no calendário */
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    text-align: center;
+}
+
+.calendar-days div {
+    padding: 8px;
+    border: 1px solid #ddd;
+    background-color: #f0f0f0;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.calendar-days div:hover {
+    background-color: #ddd;
+}
+
+/* Dia atual */
+.calendar-days div.today {
+    background-color: #333;
+    color: white;
+}
+
+/* Estilo do Modal */
+.modal {
+    display: none; /* Inicialmente escondido */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo mais escuro */
+    padding-top: 100px;
+}
+
+.modal-content {
+    background-color: white;
+    margin: auto;
+    padding: 15px;
+    width: 250px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    color: black;
+    float: right;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Estilo do campo de input */
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+/* Estilo para o texto de rodapé */
+.footer-text {
+    position: absolute;
+    bottom: 20px; /* Distância do final da página */
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+}

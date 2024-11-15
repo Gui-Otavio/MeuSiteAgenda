@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <div class="welcome-text">
+        <h1>Bem-vindo à Meu Site Agenda</h1>
+        <p>Escolha um horário para agendar.</p>
+    </div>
+    <div class="calendar">
+        <!-- Controle do Ano -->
+        <div class="calendar-year">
+            <button id="prev-year" onclick="changeYear(-1)">&#9664;</button>
+            <span id="year">2024</span>
+            <button id="next-year" onclick="changeYear(1)">&#9654;</button>
+        </div>
+        
+        <!-- Controle dos Meses -->
+        <div class="calendar-month">
+            <button id="prev-month" onclick="changeMonth(-1)">&#9664;</button>
+            <span id="month-name">Janeiro</span>
+            <button id="next-month" onclick="changeMonth(1)">&#9654;</button>
+        </div>
+    
+        <!-- Exibição dos Dias -->
+        <div class="calendar-days" id="calendar-days">
+            <!-- Javascript vai inserir os dias aqui -->
+        </div>
+    </div>
+
+    <!-- Modal de Agendamento -->
+    <div id="booking-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Agendar Horário</h2>
+            <div id="available-times"></div>
+            <input type="text" id="client-name" placeholder="Nome do cliente">
+            <button onclick="saveBooking()">Salvar Agendamento</button>
+        </div>
+    </div>
+    <div class="footer-text">
+        <p>Meu Site Agenda - Todos os direitos reservados a GoB Inc.</p>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
